@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Game</title>
+    <link rel="stylesheet" href="../styles/pc.css">
+</head>
+<body>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-message"></p>
+            <button id="popup-button"></button>
+            <div id="popup-buttons" class="popup-buttons"></div>
+        </div>
+    </div>
+    <div id="game-area">
+        <div id="ball"></div>
+        <div id="goal">BUT</div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+        <div class="triangle"></div>
+    </div>
+    <div id="timer">0:30</div>
+    <audio id="bounce-sound" src="../audios/arcade4.mp3" preload="auto"></audio>
+    <audio id="goal-sound" src="../audios/arcade3.mp3" preload="auto"></audio>
+    <audio id="gameover-sound" src="../audios/incorrect.mp3" preload="auto"></audio>
+    <audio id="background-sound" src="../audios/sound.mp3" preload="auto" loop></audio>
+    <script src="../js/pc.js"></script>
+</body>
+</html>

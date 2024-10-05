@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-area {
+    position: relative;
+    width: 600px;
+    height: 800px;
+    background-image: url('../images/arcade_back.png'); /* Updated background image */
+    background-size: cover;
+    background-color: #1A1A1D;
+    border: 2px solid #333;
+}
+
+#ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #FFFF00; /* Neon Yellow */
+    border: 2px solid #333; /* Dark Outline */
+    border-radius: 50%;
+    top: calc(100% - 50px); /* Ball starts at the bottom */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#goal {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background-color: green; /* Bright Green */
+    border: 2px solid #333;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid cyan;
+}
+
+.triangle.dark{
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #FF0000; /* Bright Red */
+    border: 2px solid #000; /* Thin Black Outline */
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid black;
+}
+
+/* Positioning all 11 triangles randomly within the game area */
+.triangle:nth-child(3) { top: 100px; left: 150px; }
+.triangle:nth-child(4) { top: 200px; left: 400px; }
+.triangle:nth-child(5) { top: 300px; left: 250px; }
+.triangle:nth-child(6) { top: 400px; left: 100px; }
+.triangle:nth-child(7) { top: 500px; left: 350px; }
+.triangle:nth-child(8) { top: 600px; left: 200px; }
+.triangle:nth-child(9) { top: 250px; left: 450px; }
+.triangle:nth-child(10) { top: 150px; left: 50px; }
+.triangle:nth-child(11) { top: 550px; left: 300px; }
+.triangle:nth-child(12) { top: 700px; left: 100px; }
+.triangle:nth-child(13) { top: 350px; left: 50px; }
+
+/* Timer styling */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Popup Button */
+#popup-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#popup-button:hover {
+    background-color: #218838;
+}

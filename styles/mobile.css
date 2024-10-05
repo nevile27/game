@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    touch-action: none; /* Disable browser default touch actions */
+}
+
+#gameArea {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-image: url('../images/arcade_back.png'); /* Updated background image */
+    background-size: cover;
+    background-color: #1A1A1D;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+#ball, .triangle, #goal {
+    position: absolute;
+}
+
+#ball {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#goal {
+    width: 100px;
+    height: 20px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.triangle {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.triangle.dark{
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #FF0000; /* Bright Red */
+    border: 2px solid #000; /* Thin Black Outline */
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid black;
+}
+
+#timer {
+    font-size: 2vw; /* Adjust based on screen width */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24;
+    z-index: 100;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.popup-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.popup-button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Popup Button */
+#popup-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#popup-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #timer {
+        font-size: 3vw; /* Larger timer font for smaller screens */
+    }
+
+    #ball, .triangle {
+        width: 30px;
+        height: 30px;
+    }
+}
