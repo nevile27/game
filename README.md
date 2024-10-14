@@ -19,7 +19,7 @@ Petit jeu maison.
 
 ## Démo
 
-Cliquez sur les vignettes pour voir la video de démonstration sur youtube.
+Cliquez sur la vignette pour voir la video de démonstration sur youtube.
 
 [![image](https://github.com/nevile27/game/blob/main/images/arcade_back.png)](https://youtube.com/shorts/Nb53bbts_68)
 
