@@ -21,7 +21,7 @@ Petit jeu maison.
 
 Cliquez sur les vignettes pour voir la video de démonstration sur youtube.
 
-[![image](https://github.com/nevile27/SRC/assets/69016800/4b287afe-920b-4d33-abe4-39e2cf1fa6e4)](https://youtube.com/shorts/Nb53bbts_68)
+[![image](https://github.com/nevile27/game/blob/main/images/arcade_back.png)](https://youtube.com/shorts/Nb53bbts_68)
 
 
 ## Utiliser en ligne
